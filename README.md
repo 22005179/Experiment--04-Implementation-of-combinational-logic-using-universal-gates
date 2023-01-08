@@ -26,18 +26,98 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
-## Logic Diagram
-## Procedure
-## Program:
-/*
-Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-## RTL realization
+ Procedure
+ Program:
 
-## Output:
-## RTL
-## Timing Diagram
-## Result:
+Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programmi
+COMBINATION 1
+
+module combone(A,B,C,D,F
+
+input A,B,C,D;
+
+output F;
+
+wire P,Q,R;
+
+assign P=(~(~C & B & A));
+
+assign Q=(~(~D & C & A));
+
+assign R=(~(C & ~B & A));
+
+assign F=~(P & Q & R);
+
+endmodule
+
+COMBINATION 2
+
+module combtwo(A,B,C,D,F);
+
+input A,B,C,D;
+
+output F;
+
+wire P,Q,R,S;
+
+assign P = (C & ~B & A);
+
+assign Q = (D & ~C & A);
+
+assign R = (C & ~B & A);
+
+assign S = (~(P | Q | R));
+
+assign F = (~s);
+
+endmodule
+
+
+Developed by:K.ABINAYA 
+RegisterNumber:22005179
+
+COMBINATION 1
+
+ RTL realization
+
+
+![Screenshot (25)](https://user-images.githubusercontent.com/121557762/211180158-a893c7b1-963c-4351-8f28-e6071a9dddc9.png)
+
+
+TIMING DIAGRAM
+
+
+
+![Screenshot (26)](https://user-images.githubusercontent.com/121557762/211180224-6a8e5c8d-1269-432a-a3e2-3b4cadf55a6a.png)
+
+
+
+
+TRUTH TABLE
+
+
+![Screenshot (27)](https://user-images.githubusercontent.com/121557762/211180262-ca18992e-9621-4297-a195-e72a4ae786b8.png)
+
+
+
+COMBINATION 2
+
+RTL REALIZATION
+
+![Screenshot (28)](https://user-images.githubusercontent.com/121557762/211180005-61133042-072a-4f7c-8f6b-37f4bc705c40.png)NATION 2
+
+
+
+TIMING DIAGRAM 
+
+![Screenshot (29)](https://user-images.githubusercontent.com/121557762/211180007-9fa0ea24-9d74-4e1c-98bb-65ebfe3038af.png)
+
+TRUTH TABLE
+
+![Screenshot (30)](https://user-images.githubusercontent.com/121557762/211180010-9deec638-70c6-4600-96a4-db6ea502dbb5.png)
+
+
+
+
+Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
